@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "arcana",
+  "version": "${version}",
+  "name": "Arcana",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/arcana/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "arcanamod.arcana.ArcanaClient"
+    ],
+    "main": [
+      "arcanamod.arcana.Arcana"
+    ]
+  },
+  "mixins": [
+    "arcana.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.8",
+    "fabric": "*",
+    "minecraft": "1.18"
+  }
+}

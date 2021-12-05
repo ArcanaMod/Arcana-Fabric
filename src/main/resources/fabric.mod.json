@@ -15,6 +15,9 @@
     ],
     "main": [
       "arcanamod.arcana.Arcana"
+    ],
+    "modmenu": [
+      "arcanamod.arcana.common.compat.ArcanaModMenu"
     ]
   },
   "mixins": [

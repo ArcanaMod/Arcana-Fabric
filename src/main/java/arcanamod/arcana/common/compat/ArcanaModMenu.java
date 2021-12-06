@@ -26,6 +26,6 @@ public class ArcanaModMenu implements ModMenuApi {
     }
 
     public static Text translatable(String text) {
-        return new TranslatableText("config." + Arcana.MODID + "." + text);
+        return new TranslatableText("config.%s.%s".formatted(Arcana.MODID, text));
     }
 }

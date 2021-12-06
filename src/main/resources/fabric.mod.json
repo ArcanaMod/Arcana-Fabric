@@ -23,6 +23,8 @@
   "mixins": [
     "arcana.mixins.json"
   ],
+  "accessWidener" : "arcana.accesswidener",
+  "accessWidenerAllowance": "Yes, do what I say!",
   "depends": {
     "fabricloader": ">=0.12.8",
     "fabric": "*",

@@ -1,3 +1,0 @@
-accessWidener v1 named
-accessible method net/minecraft/util/registry/Registry create (Lnet/minecraft/util/registry/RegistryKey;Ljava/lang/String;Ljava/util/function/Supplier;)Lnet/minecraft/util/registry/DefaultedRegistry
-# Oh shit I hate it. I want mixins and not this :(

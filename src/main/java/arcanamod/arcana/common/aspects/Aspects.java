@@ -1,9 +1,9 @@
 package arcanamod.arcana.common.aspects;
 
 import arcanamod.arcana.Arcana;
-import arcanamod.arcana.RegistryAccessor;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
+import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.DefaultedRegistry;
 import net.minecraft.util.registry.Registry;
@@ -20,9 +20,7 @@ public class Aspects {
 
     static {
         ASPECTS_KEY = RegistryKey.ofRegistry(Arcana.identifier());
-        ASPECTS = Registry.create(ASPECTS_KEY, "empty", () -> {
-            return Aspects.EMPTY;
-        });
+        ASPECTS = FabricRegistryBuilder.createDefaulted(Aspect.class,Arcana.identifier("aspects"),Arcana.identifier("empty")).buildAndRegister();
     }
 
     //Empty Aspect

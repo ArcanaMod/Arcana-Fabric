@@ -15,11 +15,9 @@ import java.util.List;
 
 public class Aspects {
 
-    public static final RegistryKey<Registry<Aspect>> ASPECTS_KEY;
     public static final DefaultedRegistry<Aspect> ASPECTS;
 
     static {
-        ASPECTS_KEY = RegistryKey.ofRegistry(Arcana.identifier());
         ASPECTS = FabricRegistryBuilder.createDefaulted(Aspect.class,Arcana.identifier("aspects"),Arcana.identifier("empty")).buildAndRegister();
     }
 

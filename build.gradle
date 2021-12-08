@@ -9,6 +9,8 @@ group = project.maven_group
 repositories {
     maven { url "https://maven.shedaniel.me/" }
     maven { url = "https://maven.terraformersmc.com/releases/" }
+    maven { name = 'Ladysnake Mods'
+            url = 'https://ladysnake.jfrog.io/artifactory/mods' }
 }
 
 dependencies {
@@ -23,6 +25,17 @@ dependencies {
     modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
+
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:4.0.1"
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-util:3.1.1" // Remove if we don't need it.
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-block:4.0.1" // Aspects
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-item:4.0.1" // Wands
+
+    // Includes Cardinal Components API as a Jar-in-Jar dependency (optional)
+    include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:4.0.1"
+    include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-util:3.1.1"
+    include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-block:4.0.1"
+    include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-item:4.0.1"
 }
 
 processResources {

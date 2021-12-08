@@ -19,6 +19,6 @@ public class Aspect {
 
     @Override
     public String toString() {
-        return "«Aspect: %s»".formatted(getId());
+        return Aspects.ASPECTS.getId(this).getPath();
     }
 }
